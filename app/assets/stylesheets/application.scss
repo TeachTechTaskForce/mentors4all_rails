@@ -55,6 +55,10 @@ body {
   }
 }
 
+.container {
+  @include outer-container(80%);
+}
+
 //
 // Header
 //
