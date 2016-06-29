@@ -1,0 +1,50 @@
+.page-content
+  .mentor-header
+    .mentor-avatar
+      %img{:src => "http://placehold.it/210x210"}/
+    .mentor-description
+      %h1
+        = @mentor.first_name
+        = @mentor.last_name
+      %p Threepio! Come in, Threepio! Threepio! Get to the top! I can't Where could he be? Threepio! Threepio, will you come in…
+  %hr/
+  .mentor-details
+    %h4
+      = @mentor.first_name
+      is currently...
+    .mentor-availability.available
+      %h1 Available to Mentor
+    .mentor-details-2
+      %h4 Expertise
+      %ul
+        %li Scratch
+        %li (AP) Computer Science Principles)
+        %li Code.org
+        %li CS First
+        %li Python
+        %li HTML / CSS / Javascript
+      %h4 Grades
+      %ul
+        %li K-2
+        %li 3-5
+        %li 6-8
+      %h4 Chicago Area
+      %ul
+        %li North side
+        %li South side
+    .mentor-details-2
+      %h4 Weekly Availability
+      %ul
+        %li
+          %p.day Monday
+          %p.time Before noon
+        %li
+          %p.day Wednesday
+          %p.time All day
+        %li
+          %p.day Friday
+          %p.time Before noon
+  %hr/
+  .contact
+    %button{:value => "Contact"}
+      Contact #{@mentor.first_name}
