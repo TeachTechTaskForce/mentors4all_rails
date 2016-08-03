@@ -8,5 +8,8 @@ class HomeController < ApplicationController
 
   def mentors
   end
-  
+
+  def registration_success
+  end
+
 end
