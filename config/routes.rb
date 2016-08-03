@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   get '/mentors', to: 'home#mentors', as: 'about_mentors'
   get '/teachers', to: 'home#teachers', as: 'about_teachers'
+  get '/registration_success', to: 'home#registration_success', as: 'registration_success'
 
 end
