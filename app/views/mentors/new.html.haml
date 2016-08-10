@@ -1,0 +1,12 @@
+%h2 Sign Up To Become a Mentor
+= form_for @mentor do |f|
+  = fields_for :locations do |l|
+    .field
+      = l.label "Available Locations: "
+      %br/
+      = l.collection_check_boxes :location_ids, Location.all, :id, :name do |b|
+        = b.check_box
+        = b.label
+        %br/
+  .actions
+    = f.submit "Sign up"

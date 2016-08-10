@@ -7,6 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 
-# ['registered', 'educator', 'mentor', 'admin'].each do |role|
-#   Role.find_or_create_by({name: role})
-# end
+locations = ["South Side Schools", "Southwest Side Schools", "West Side Schools", "Northwest Side Schools", "North Side Schools", "City Center"]
+
+locations.each do |location|
+  Location.create(name: location)
+end

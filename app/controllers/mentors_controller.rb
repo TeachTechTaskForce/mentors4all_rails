@@ -4,4 +4,11 @@ class MentorsController < ApplicationController
 
   def index
   end
+
+  def new
+    @mentor = Mentor.new
+  end
+
+  def create
+  end
 end
