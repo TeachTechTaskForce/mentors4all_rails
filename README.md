@@ -2,6 +2,7 @@
 
 Mentors4All is an application designed to connect Chicago Public Schools teachers with mentors in the Tech community.
 
+[Click here](http://mentors4all.herokuapp.com/) to view the current app on heroku.
 [Click here](http://mentors4all.surge.sh/) to view the demo app.
 
 
