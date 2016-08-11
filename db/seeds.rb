@@ -11,6 +11,13 @@ locations = ["South Side Schools", "Southwest Side Schools", "West Side Schools"
 grades = ["K-2", "3-5", "6-8", "9-12"]
 availabilities = ["Mondays", "Tuesdays", "Wednesdays", "Thursdays", "Fridays"]
 
+question_1 = "Please describe your work experience. (Say 'None' if you don't have any. Again, this question is background information, and not a requirement to become a mentor.)"
+question_2 = "Why are you interested in becoming a mentor?"
+question_3 = "How would you describe computer science to a fourth grader?"
+question_4 = "Briefly describe your areas of Computer Science Expertise."
+
+questions = [question_1, question_2, question_3, question_4]
+
 locations.each do |location|
   Location.create(name: location)
 end
@@ -21,4 +28,8 @@ end
 
 availabilities.each do |availabiltiy|
   Availability.create(name: availabiltiy)
+end
+
+questions.each do |question|
+  ApplicationQuestion.create(question: question)
 end

@@ -9,20 +9,20 @@
         = b.label
         %br/
   %br/
-  = fields_for :grades do |l|
+  = fields_for :grades do |g|
     .field
-      = l.label "I would like to work with students in these grades: "
-      %br/
-      = l.collection_check_boxes :grade_ids, Grade.all, :id, :name do |b|
+      = g.label "I would like to work with students in these grades: "
+      %g
+      = g.collection_check_boxes :grade_ids, Grade.all, :id, :name do |b|
         = b.check_box
         = b.label
         %br/
   %br/
-  = fields_for :availabilities do |l|
+  = fields_for :availabilities do |a|
     .field
-      = l.label "I am generally avaiable during these times: "
+      = a.label "I am generally avaiable during these times: "
       %br/
-      = l.collection_check_boxes :availability_ids, Availability.all, :id, :name do |b|
+      = a.collection_check_boxes :availability_ids, Availability.all, :id, :name do |b|
         = b.check_box
         = b.label
         %br/

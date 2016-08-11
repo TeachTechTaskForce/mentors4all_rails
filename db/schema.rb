@@ -16,6 +16,12 @@ ActiveRecord::Schema.define(version: 20160811210230) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "application_questions", force: :cascade do |t|
+    t.string   "question",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "availabilities", force: :cascade do |t|
     t.string   "name",       null: false
     t.datetime "created_at", null: false
@@ -45,6 +51,15 @@ ActiveRecord::Schema.define(version: 20160811210230) do
   end
 
   create_table "mentors", force: :cascade do |t|
+    t.string "workplace"
+  end
+
+  create_table "mentors_application_questions", force: :cascade do |t|
+    t.integer  "question_id", null: false
+    t.integer  "mentor_id",   null: false
+    t.text     "answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "mentors_availabilities", force: :cascade do |t|
