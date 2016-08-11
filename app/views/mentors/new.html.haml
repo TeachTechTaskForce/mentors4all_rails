@@ -8,5 +8,24 @@
         = b.check_box
         = b.label
         %br/
+  %br/
+  = fields_for :grades do |l|
+    .field
+      = l.label "I would like to work with students in these grades: "
+      %br/
+      = l.collection_check_boxes :grade_ids, Grade.all, :id, :name do |b|
+        = b.check_box
+        = b.label
+        %br/
+  %br/
+  = fields_for :availabilities do |l|
+    .field
+      = l.label "I am generally avaiable during these times: "
+      %br/
+      = l.collection_check_boxes :availability_ids, Availability.all, :id, :name do |b|
+        = b.check_box
+        = b.label
+        %br/
+  %br/
   .actions
     = f.submit "Sign up"

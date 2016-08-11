@@ -10,5 +10,9 @@ class MentorsController < ApplicationController
   end
 
   def create
+    @mentor = Mentor.new
+    if @mentor.save
+      redirect_to root_path
+    end
   end
 end

@@ -8,7 +8,17 @@
 #
 
 locations = ["South Side Schools", "Southwest Side Schools", "West Side Schools", "Northwest Side Schools", "North Side Schools", "City Center"]
+grades = ["K-2", "3-5", "6-8", "9-12"]
+availabilities = ["Mondays", "Tuesdays", "Wednesdays", "Thursdays", "Fridays"]
 
 locations.each do |location|
   Location.create(name: location)
+end
+
+grades.each do |grade|
+  Grade.create(name: grade)
+end
+
+availabilities.each do |availabiltiy|
+  Availability.create(name: availabiltiy)
 end
