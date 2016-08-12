@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20160811210230) do
     t.string "workplace"
   end
 
-  create_table "mentors_application_questions", force: :cascade do |t|
+  create_table "mentors_answers", force: :cascade do |t|
     t.integer  "question_id", null: false
     t.integer  "mentor_id",   null: false
     t.text     "answer"

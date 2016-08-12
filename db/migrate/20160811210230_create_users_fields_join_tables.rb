@@ -20,7 +20,7 @@ class CreateUsersFieldsJoinTables < ActiveRecord::Migration
       t.integer :availability_id, null: false
     end
 
-    create_table :mentors_application_questions do |t|
+    create_table :mentors_answers do |t|
       t.integer :question_id, null: false
       t.integer :mentor_id, null: false
       t.text :answer

@@ -27,5 +27,12 @@
         = b.label
         %br/
   %br/
+  = fields_for :answers do |a|
+    - ApplicationQuestion.all.each do |q|
+      .field
+      = a.label q.question
+      %br/
+      = a.text_area :answer
+  %br/
   .actions
     = f.submit "Sign up"
