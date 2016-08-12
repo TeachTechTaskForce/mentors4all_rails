@@ -15,8 +15,23 @@ class CreateFields < ActiveRecord::Migration
       t.timestamps null: false
     end
 
+    create_table :occupations do |t|
+      t.string :name, null: false
+      t.timestamps null: false
+    end
+
     create_table :application_questions do |t|
       t.string :question, null: false
+      t.timestamps null: false
+    end
+
+    create_table :languages do |t|
+      t.string :name, null: false
+      t.timestamps null: false
+    end
+
+    create_table :services do |t|
+      t.string :name, null: false
       t.timestamps null: false
     end
   end

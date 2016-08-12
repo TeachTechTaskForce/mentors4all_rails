@@ -10,6 +10,9 @@
 locations = ["South Side Schools", "Southwest Side Schools", "West Side Schools", "Northwest Side Schools", "North Side Schools", "City Center"]
 grades = ["K-2", "3-5", "6-8", "9-12"]
 availabilities = ["Mondays", "Tuesdays", "Wednesdays", "Thursdays", "Fridays"]
+occupations = ["Professional", "Student", "Educator"]
+languages = ["HTML/CSS", "Javascript", "Ruby", "Python", "Java", "C/C\#/C++", "Other"]
+services = ["In-class support to students and teachers (usually sometime between 8 AM and 3 PM)", "Out-of-class or prep time support (usually during the school day)", "After school support"]
 
 question_1 = "Please describe your work experience. (Say 'None' if you don't have any. Again, this question is background information, and not a requirement to become a mentor.)"
 question_2 = "Why are you interested in becoming a mentor?"
@@ -32,4 +35,16 @@ end
 
 questions.each do |question|
   ApplicationQuestion.create(question: question)
+end
+
+occupations.each do |occupation|
+  Occupation.create(name: occupation)
+end
+
+languages.each do |language|
+  Language.create(name: language)
+end
+
+services.each do |service|
+  Service.create(name: service)
 end

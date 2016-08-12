@@ -44,6 +44,12 @@ ActiveRecord::Schema.define(version: 20160811210230) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "languages", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "locations", force: :cascade do |t|
     t.string   "name",       null: false
     t.datetime "created_at"
@@ -72,14 +78,41 @@ ActiveRecord::Schema.define(version: 20160811210230) do
     t.integer "grade_id",  null: false
   end
 
+  create_table "mentors_languages", force: :cascade do |t|
+    t.integer "mentor_id",   null: false
+    t.integer "language_id", null: false
+  end
+
   create_table "mentors_locations", force: :cascade do |t|
     t.integer "mentor_id",   null: false
     t.integer "location_id", null: false
   end
 
+  create_table "mentors_occupations", force: :cascade do |t|
+    t.integer "mentor_id",     null: false
+    t.integer "occupation_id", null: false
+  end
+
+  create_table "mentors_services", force: :cascade do |t|
+    t.integer "mentor_id",  null: false
+    t.integer "service_id", null: false
+  end
+
   create_table "mentors_users", force: :cascade do |t|
     t.integer "user_id",   null: false
     t.integer "mentor_id", null: false
+  end
+
+  create_table "occupations", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "teachers_availabilities", force: :cascade do |t|
