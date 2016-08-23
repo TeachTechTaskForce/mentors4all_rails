@@ -1,0 +1,61 @@
+%h2 Sign Up To Become a Mentor
+= form_for @mentor do |f|
+  = fields_for :locations do |l|
+    .field
+      = l.label "Available Locations: "
+      = l.collection_check_boxes :location_ids, Location.all, :id, :name do |b|
+        = b.check_box
+        = b.label
+        %br/
+  %br/
+  = fields_for :grades do |g|
+    .field
+      = g.label "I would like to work with students in these grades: "
+      = g.collection_check_boxes :grade_ids, Grade.all, :id, :name do |b|
+        = b.check_box
+        = b.label
+        %br/
+  %br/
+  = fields_for :availabilities do |a|
+    .field
+      = a.label "I am generally avaiable during these times: "
+      = a.collection_check_boxes :availability_ids, Availability.all, :id, :name do |b|
+        = b.check_box
+        = b.label
+        %br/
+  %br/
+  = fields_for :occupations do |a|
+    .field
+      = a.label "What is your current occupation?"
+      = a.collection_check_boxes :occupation_ids, Occupation.all, :id, :name do |b|
+        = b.check_box
+        = b.label
+        %br/
+  %br/
+  = f.label "Where do you currently work/study?"
+  = f.text_field :workplace
+  %br/
+  = fields_for :languages do |a|
+    .field
+      = a.label "What languages/curriculums do you have experience using?"
+      = a.collection_check_boxes :language_ids, Language.all, :id, :name do |b|
+        = b.check_box
+        = b.label
+        %br/
+  %br/
+  = fields_for :services do |a|
+    .field
+      = a.label "I could provide..."
+      = a.collection_check_boxes :service_ids, Service.all, :id, :name do |b|
+        = b.check_box
+        = b.label
+        %br/
+  %br/
+  = fields_for :answers do |a|
+    - ApplicationQuestion.all.each do |q|
+      .field
+      = a.label q.question
+      = a.text_area :answer
+  %br/
+  .actions
+    = f.submit "Sign up"

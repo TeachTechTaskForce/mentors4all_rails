@@ -3,6 +3,7 @@
 Mentors4All is an application designed to connect Chicago Public Schools teachers with mentors in the Tech community.
 
 [Click here](http://mentors4all.herokuapp.com/) to view the current app on heroku.
+
 [Click here](http://mentors4all.surge.sh/) to view the demo app.
 
 
@@ -13,6 +14,7 @@ git clone https://github.com/andyras/mentors4all_rails.git
 cd mentors4all_rails
 bundle install
 bundle exec rake db:setup
+bundle exec rake db:seed
 rails s
 ```
 
