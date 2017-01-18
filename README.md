@@ -54,3 +54,6 @@ View the project in your browser at [localhost:3000](http://localhost:3000/).
 
 + Check out [issues](https://github.com/TeachTechTaskForce/mentors4all_rails/issues) for current development needs.
 + Submit a pull request from your forked repo or a branch. Please include a comment or commit message with a description of proposed changes.
+
+## possible inspirations
+- volunteermatch.com
